@@ -1,0 +1,11 @@
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\PetFood Project.exe.config
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\PetFood Project.exe
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\PetFood Project.pdb
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.AssemblyReference.cache
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.SuggestedBindingRedirects.cache
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Login.resources
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Properties.Resources.resources
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.GenerateResource.cache
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.CoreCompileInputs.cache
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.exe
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.pdb
