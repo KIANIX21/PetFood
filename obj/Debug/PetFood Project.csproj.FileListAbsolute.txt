@@ -3,9 +3,36 @@ D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\PetFood Proje
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\PetFood Project.pdb
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.AssemblyReference.cache
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.SuggestedBindingRedirects.cache
-D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Login.resources
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Properties.Resources.resources
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.GenerateResource.cache
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.CoreCompileInputs.cache
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.exe
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.pdb
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\BouncyCastle.Crypto.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\Google.Protobuf.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\K4os.Compression.LZ4.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\K4os.Hash.xxHash.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\MySql.Data.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\NuGet.Frameworks.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Buffers.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.IO.Pipelines.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Memory.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Numerics.Vectors.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\BouncyCastle.Crypto.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\Google.Protobuf.pdb
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\Google.Protobuf.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\K4os.Compression.LZ4.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\K4os.Hash.xxHash.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\MySql.Data.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Buffers.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.IO.Pipelines.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Memory.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Numerics.Vectors.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Load.resources
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.CopyComplete

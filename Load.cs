@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace PetFood_Project
 {
-    public partial class Login : Form
+    public partial class Load : Form
     {
-        public Login()
+        public Load()
         {
             InitializeComponent();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
