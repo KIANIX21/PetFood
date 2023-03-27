@@ -34,5 +34,6 @@ D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Memory
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Numerics.Vectors.xml
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Load.resources
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.CopyComplete
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\Guna.UI2.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Splash.resources
