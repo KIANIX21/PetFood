@@ -37,3 +37,4 @@ D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Thread
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood Project.csproj.CopyComplete
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\Guna.UI2.dll
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Splash.resources
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Login.resources

@@ -17,12 +17,7 @@ namespace PetFood_Project
             InitializeComponent();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
 
         }
