@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_product = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_Order = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_LogOut = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -67,18 +67,6 @@
             this.guna2CirclePictureBox1.TabIndex = 1;
             this.guna2CirclePictureBox1.TabStop = false;
             this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(82, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "PET FOOD STORE";
             // 
             // guna2Shapes1
             // 
@@ -110,73 +98,80 @@
             this.guna2PictureBox2.TabStop = false;
             this.guna2PictureBox2.UseTransparentBackground = true;
             // 
-            // guna2Button1
+            // btn_product
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 21;
-            this.guna2Button1.DefaultAutoSize = true;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.guna2Button1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(86, 211);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(169, 45);
-            this.guna2Button1.TabIndex = 5;
-            this.guna2Button1.Text = "• Product";
-            this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btn_product.Animated = true;
+            this.btn_product.AutoRoundedCorners = true;
+            this.btn_product.BackColor = System.Drawing.Color.Transparent;
+            this.btn_product.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_product.BorderRadius = 21;
+            this.btn_product.DefaultAutoSize = true;
+            this.btn_product.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_product.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_product.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_product.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_product.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.btn_product.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.btn_product.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btn_product.ForeColor = System.Drawing.Color.White;
+            this.btn_product.IndicateFocus = true;
+            this.btn_product.Location = new System.Drawing.Point(86, 211);
+            this.btn_product.Name = "btn_product";
+            this.btn_product.Size = new System.Drawing.Size(169, 45);
+            this.btn_product.TabIndex = 5;
+            this.btn_product.Text = "• Product";
+            this.btn_product.UseTransparentBackground = true;
+            this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
-            // guna2Button2
+            // btn_Order
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.DefaultAutoSize = true;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.guna2Button2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(86, 255);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(140, 45);
-            this.guna2Button2.TabIndex = 5;
-            this.guna2Button2.Text = "• Order";
-            this.guna2Button2.UseTransparentBackground = true;
+            this.btn_Order.Animated = true;
+            this.btn_Order.AutoRoundedCorners = true;
+            this.btn_Order.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Order.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Order.BorderRadius = 21;
+            this.btn_Order.DefaultAutoSize = true;
+            this.btn_Order.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Order.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Order.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Order.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Order.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.btn_Order.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.btn_Order.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Order.ForeColor = System.Drawing.Color.White;
+            this.btn_Order.IndicateFocus = true;
+            this.btn_Order.Location = new System.Drawing.Point(86, 255);
+            this.btn_Order.Name = "btn_Order";
+            this.btn_Order.Size = new System.Drawing.Size(140, 45);
+            this.btn_Order.TabIndex = 5;
+            this.btn_Order.Text = "• Order";
+            this.btn_Order.UseTransparentBackground = true;
+            this.btn_Order.Click += new System.EventHandler(this.btn_Order_Click);
             // 
-            // guna2Button3
+            // btn_LogOut
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 21;
-            this.guna2Button3.DefaultAutoSize = true;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.guna2Button3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(86, 301);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(162, 45);
-            this.guna2Button3.TabIndex = 5;
-            this.guna2Button3.Text = "• LogOut";
-            this.guna2Button3.UseTransparentBackground = true;
+            this.btn_LogOut.Animated = true;
+            this.btn_LogOut.AutoRoundedCorners = true;
+            this.btn_LogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btn_LogOut.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_LogOut.BorderRadius = 21;
+            this.btn_LogOut.DefaultAutoSize = true;
+            this.btn_LogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_LogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_LogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.btn_LogOut.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.btn_LogOut.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btn_LogOut.ForeColor = System.Drawing.Color.White;
+            this.btn_LogOut.IndicateFocus = true;
+            this.btn_LogOut.Location = new System.Drawing.Point(86, 301);
+            this.btn_LogOut.Name = "btn_LogOut";
+            this.btn_LogOut.Size = new System.Drawing.Size(162, 45);
+            this.btn_LogOut.TabIndex = 5;
+            this.btn_LogOut.Text = "• LogOut";
+            this.btn_LogOut.UseTransparentBackground = true;
+            this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
             // 
             // label2
             // 
@@ -190,15 +185,27 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Nama Admin";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(487, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 35);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Dashboard";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 561);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btn_LogOut);
+            this.Controls.Add(this.btn_Order);
+            this.Controls.Add(this.btn_product);
             this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.guna2Shapes1);
             this.Controls.Add(this.label1);
@@ -220,12 +227,12 @@
 
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btn_product;
+        private Guna.UI2.WinForms.Guna2Button btn_Order;
+        private Guna.UI2.WinForms.Guna2Button btn_LogOut;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

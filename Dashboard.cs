@@ -25,14 +25,29 @@ namespace PetFood_Project
             label2.BackColor = Color.Transparent;
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        private void btn_product_Click(object sender, EventArgs e)
+        {
+            Product pr = new Product();
+            pr.Show();
+            this.Hide();
+            
+        }
+
+        private void btn_LogOut_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Order_Click(object sender, EventArgs e)
+        {
+            //Order or = new Order();
+            //or.Show();
+            //this.Hide();
         }
     }
 }
