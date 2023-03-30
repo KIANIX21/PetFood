@@ -38,6 +38,7 @@
             this.btn_LogOut = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Btn_Dashboard = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -115,7 +116,7 @@
             this.btn_product.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
             this.btn_product.ForeColor = System.Drawing.Color.White;
             this.btn_product.IndicateFocus = true;
-            this.btn_product.Location = new System.Drawing.Point(86, 211);
+            this.btn_product.Location = new System.Drawing.Point(86, 247);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(169, 45);
             this.btn_product.TabIndex = 5;
@@ -140,7 +141,7 @@
             this.btn_Order.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
             this.btn_Order.ForeColor = System.Drawing.Color.White;
             this.btn_Order.IndicateFocus = true;
-            this.btn_Order.Location = new System.Drawing.Point(86, 255);
+            this.btn_Order.Location = new System.Drawing.Point(86, 287);
             this.btn_Order.Name = "btn_Order";
             this.btn_Order.Size = new System.Drawing.Size(140, 45);
             this.btn_Order.TabIndex = 5;
@@ -165,7 +166,7 @@
             this.btn_LogOut.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
             this.btn_LogOut.ForeColor = System.Drawing.Color.White;
             this.btn_LogOut.IndicateFocus = true;
-            this.btn_LogOut.Location = new System.Drawing.Point(86, 301);
+            this.btn_LogOut.Location = new System.Drawing.Point(86, 330);
             this.btn_LogOut.Name = "btn_LogOut";
             this.btn_LogOut.Size = new System.Drawing.Size(162, 45);
             this.btn_LogOut.TabIndex = 5;
@@ -197,11 +198,34 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Dashboard";
             // 
+            // Btn_Dashboard
+            // 
+            this.Btn_Dashboard.Animated = true;
+            this.Btn_Dashboard.AutoRoundedCorners = true;
+            this.Btn_Dashboard.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_Dashboard.BorderRadius = 21;
+            this.Btn_Dashboard.DefaultAutoSize = true;
+            this.Btn_Dashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Dashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_Dashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_Dashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_Dashboard.FillColor = System.Drawing.Color.Transparent;
+            this.Btn_Dashboard.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_Dashboard.ForeColor = System.Drawing.Color.White;
+            this.Btn_Dashboard.Location = new System.Drawing.Point(86, 205);
+            this.Btn_Dashboard.Name = "Btn_Dashboard";
+            this.Btn_Dashboard.Size = new System.Drawing.Size(211, 45);
+            this.Btn_Dashboard.TabIndex = 7;
+            this.Btn_Dashboard.Text = "• Dashboard";
+            this.Btn_Dashboard.UseTransparentBackground = true;
+            this.Btn_Dashboard.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.Btn_Dashboard);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_LogOut);
             this.Controls.Add(this.btn_Order);
@@ -234,5 +258,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_LogOut;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button Btn_Dashboard;
     }
 }

@@ -35,12 +35,13 @@ namespace PetFood_Project
             Product pr = new Product();
             pr.Show();
             this.Hide();
-            
         }
 
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
-
+            Login lg = new Login();
+            lg.Show();
+            this.Hide();
         }
 
         private void btn_Order_Click(object sender, EventArgs e)
@@ -48,6 +49,11 @@ namespace PetFood_Project
             //Order or = new Order();
             //or.Show();
             //this.Hide();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Dashboard ds = new Dashboard();
         }
     }
 }

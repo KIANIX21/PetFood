@@ -44,7 +44,7 @@ namespace PetFood_Project
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            string connectionString = "server=localhost;port=3306;database=petfood;uid=root;password=;";
+            string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
 
             // Check if the username and password fields are empty
             if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))

@@ -16,5 +16,26 @@ namespace PetFood_Project
         {
             InitializeComponent();
         }
+
+        private void Dashboard_Click(object sender, EventArgs e)
+        {
+            Dashboard ds = new Dashboard();
+            ds.Show();
+            this.Hide();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+        //    order or = new order();
+        //    or.show();
+        //    this.Hide();
+        }
+
+        private void btn_CRUD_Click(object sender, EventArgs e)
+        {
+            CRUD cRUD = new CRUD();
+            cRUD.Show();
+            this.Hide();
+        }
     }
 }
