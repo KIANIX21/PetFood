@@ -12,17 +12,20 @@ namespace PetFood_Project
 {
     public partial class Dashboard : Form
     {
-        public Dashboard()
+        public string username;
+        public Dashboard(string username)
         {
             InitializeComponent();
+            // Set the username as instance variable
+            this.username = username;
+
+            // Show the username on the label
+            label2.Text = username;
         }
         //•
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            label1.Parent = guna2PictureBox1;
-            label1.BackColor = Color.Transparent;
-            label2.Parent = guna2PictureBox1;
-            label2.BackColor = Color.Transparent;
+
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
@@ -32,7 +35,7 @@ namespace PetFood_Project
 
         private void btn_product_Click(object sender, EventArgs e)
         {
-            Product pr = new Product();
+            Product pr = new Product(username);
             pr.Show();
             this.Hide();
         }
@@ -46,14 +49,14 @@ namespace PetFood_Project
 
         private void btn_Order_Click(object sender, EventArgs e)
         {
-            //Order or = new Order();
-            //or.Show();
-            //this.Hide();
+            Order or = new Order(username);
+            or.Show();
+            this.Hide();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Dashboard ds = new Dashboard();
+
         }
     }
 }

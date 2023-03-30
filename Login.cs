@@ -26,10 +26,7 @@ namespace PetFood_Project
 
         private void Login_Load(object sender, EventArgs e)
         {
-            label1.Parent = guna2PictureBox1;
-            label1.BackColor = Color.Transparent;
-            label2.Parent = guna2PictureBox1;
-            label2.BackColor = Color.Transparent;
+
         }
 
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
@@ -63,12 +60,13 @@ namespace PetFood_Project
 
                 return;
             }
+
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
 
                 // Create a MySQL query to select the user with the specified username and hashed password
-                string query = "SELECT * FROM users WHERE USER_Name = @username AND USER_Password = @password";
+                string query = "SELECT * FROM users WHERE user_name = @username AND user_password = @password";
 
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
@@ -80,19 +78,21 @@ namespace PetFood_Project
                     {
                         if (reader.HasRows)
                         {
-                            // Login successful, do something here like opening a new form
-                            MessageBox.Show(this, "Login Successfull", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                            // Login successful, get the username and open the next form
+                            reader.Read();
+                            string username = reader["user_name"].ToString();
 
-                            Dashboard form2 = new Dashboard(); // buat objek baru dari Form2
+                            // Create the next form with the username as parameter and show it
+                            Dashboard formDashboard = new Dashboard(username);
+                            formDashboard.Show();
 
-                            form2.Show(); // tampilkan Form2
-                            this.Hide(); // sembunyikan Form1
+                            // Hide the current form
+                            this.Hide();
                         }
                         else
                         {
                             // Login failed, show an error message
                             MessageBox.Show(this, "Invalid username and password!!", "Caution", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-
                         }
                     }
                 }

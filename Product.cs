@@ -12,23 +12,26 @@ namespace PetFood_Project
 {
     public partial class Product : Form
     {
-        public Product()
+        private string username;
+        public Product(string username)
         {
             InitializeComponent();
+            this.username = username;
+            label1.Text = username;
         }
 
         private void Dashboard_Click(object sender, EventArgs e)
         {
-            Dashboard ds = new Dashboard();
+            Dashboard ds = new Dashboard(username);
             ds.Show();
             this.Hide();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-        //    order or = new order();
-        //    or.show();
-        //    this.Hide();
+            Order or = new Order(username);
+            or.Show();
+            this.Hide();
         }
 
         private void btn_CRUD_Click(object sender, EventArgs e)
@@ -36,6 +39,11 @@ namespace PetFood_Project
             CRUD cRUD = new CRUD();
             cRUD.Show();
             this.Hide();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

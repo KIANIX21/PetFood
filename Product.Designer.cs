@@ -224,6 +224,7 @@
             this.guna2Button2.TabIndex = 6;
             this.guna2Button2.Text = "• Logout";
             this.guna2Button2.UseTransparentBackground = true;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // label1
             // 
@@ -231,7 +232,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(90, 540);
+            this.label1.Location = new System.Drawing.Point(90, 538);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 23);
             this.label1.TabIndex = 7;

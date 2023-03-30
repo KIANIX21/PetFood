@@ -41,3 +41,4 @@ D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Proje
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Dashboard.resources
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Product.resources
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.CRUD.resources
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Order.resources
