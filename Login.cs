@@ -81,11 +81,11 @@ namespace PetFood_Project
                             // Login successful, get the username and open the next form
                             reader.Read();
                             string username = reader["user_name"].ToString();
-
+                            MessageBox.Show(this, "Login Succes!!", "Caution", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                             // Create the next form with the username as parameter and show it
                             Dashboard formDashboard = new Dashboard(username);
                             formDashboard.Show();
-
+                            
                             // Hide the current form
                             this.Hide();
                         }

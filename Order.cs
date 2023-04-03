@@ -46,5 +46,11 @@ namespace PetFood_Project
         {
 
         }
+
+        private void btn_checkout_Click(object sender, EventArgs e)
+        {
+            receipt rp = new receipt();
+            rp.Show();
+        }
     }
 }
