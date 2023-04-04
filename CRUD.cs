@@ -215,12 +215,6 @@ namespace PetFood_Project
             string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-
-            string query = "delete user_code FROM users WHERE user_name = @username";
-            using (MySqlCommand command = new MySqlCommand(query, connection))
-            {
-
-            }
         }
     }
 }

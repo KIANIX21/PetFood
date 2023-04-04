@@ -47,8 +47,6 @@
             this.btn_create = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btn_search = new Guna.UI2.WinForms.Guna2Button();
-            this.txt_search = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_create)).BeginInit();
@@ -347,52 +345,6 @@
             this.guna2CirclePictureBox2.TabStop = false;
             this.guna2CirclePictureBox2.UseTransparentBackground = true;
             // 
-            // btn_search
-            // 
-            this.btn_search.BackColor = System.Drawing.Color.Transparent;
-            this.btn_search.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
-            this.btn_search.DefaultAutoSize = true;
-            this.btn_search.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_search.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
-            this.btn_search.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btn_search.ForeColor = System.Drawing.Color.White;
-            this.btn_search.Image = ((System.Drawing.Image)(resources.GetObject("btn_search.Image")));
-            this.btn_search.Location = new System.Drawing.Point(656, 351);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(119, 35);
-            this.btn_search.TabIndex = 10;
-            this.btn_search.Text = "Search";
-            this.btn_search.UseTransparentBackground = true;
-            // 
-            // txt_search
-            // 
-            this.txt_search.AutoRoundedCorners = true;
-            this.txt_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
-            this.txt_search.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
-            this.txt_search.BorderRadius = 16;
-            this.txt_search.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_search.DefaultText = "";
-            this.txt_search.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_search.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_search.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_search.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_search.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
-            this.txt_search.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_search.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.txt_search.ForeColor = System.Drawing.Color.Transparent;
-            this.txt_search.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_search.Location = new System.Drawing.Point(845, 351);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.PasswordChar = '\0';
-            this.txt_search.PlaceholderText = "Search...";
-            this.txt_search.SelectedText = "";
-            this.txt_search.Size = new System.Drawing.Size(307, 34);
-            this.txt_search.TabIndex = 11;
-            // 
             // guna2Button1
             // 
             this.guna2Button1.Animated = true;
@@ -420,8 +372,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 561);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.txt_search);
-            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.guna2CirclePictureBox2);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.btn_delete);
@@ -467,8 +417,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_delete;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
-        private Guna.UI2.WinForms.Guna2Button btn_search;
-        private Guna.UI2.WinForms.Guna2TextBox txt_search;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
