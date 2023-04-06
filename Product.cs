@@ -16,6 +16,7 @@ namespace PetFood_Project
     { 
 
         private string username;
+        private int user_code;
         public Product(string username)
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace PetFood_Project
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Order or = new Order(username);
+            Order or = new Order(username, user_code);
             or.Show();
             this.Hide();
         }

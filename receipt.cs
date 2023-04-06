@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace PetFood_Project
         public receipt()
         {
             InitializeComponent();
+        }
+
+        private void lbl_user_Click(object sender, EventArgs e)
+        {
+            string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
         }
     }
 }

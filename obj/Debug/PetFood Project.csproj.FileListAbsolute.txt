@@ -43,3 +43,50 @@ D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Proje
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.CRUD.resources
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Order.resources
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.receipt.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\PetFood Project.exe.config
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\PetFood Project.exe
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\PetFood Project.pdb
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\Google.Protobuf.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\Guna.UI2.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\MySql.Data.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\NuGet.Frameworks.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Buffers.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Memory.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\Google.Protobuf.pdb
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\Google.Protobuf.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\MySql.Data.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Buffers.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Memory.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood Project.csproj.AssemblyReference.cache
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.CRUD.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.Dashboard.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.Login.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.Order.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.Product.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.Properties.Resources.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.receipt.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.Splash.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood Project.csproj.GenerateResource.cache
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood Project.csproj.CoreCompileInputs.cache
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood Project.csproj.CopyComplete
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood Project.exe
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood Project.pdb
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.Confirm_Order.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.List_Product.resources

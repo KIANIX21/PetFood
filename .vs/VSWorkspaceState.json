@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bin"
   ],
-  "SelectedNode": "\\PetFood Project.sln",
+  "SelectedNode": "\\Confirm_Order.cs",
   "PreviewInSolutionExplorer": false
 }

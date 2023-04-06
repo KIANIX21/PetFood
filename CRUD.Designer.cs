@@ -365,6 +365,7 @@
             this.guna2Button1.TabIndex = 12;
             this.guna2Button1.Text = "Reset";
             this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // CRUD
             // 

@@ -25,7 +25,7 @@ namespace PetFood_Project
             string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-
+            
             string query = "SELECT * FROM product";
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
@@ -210,11 +210,71 @@ namespace PetFood_Project
             return idPengguna;
         }
 
+        private void DeleteData()
+        {
+            try
+            {
+                string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
+                MySqlConnection conn = new MySqlConnection(connectionString);
+                conn.Open();
+
+                string usercode = null;
+                MySqlCommand cmd = new MySqlCommand("SELECT user_code FROM users WHERE user_name=@username", conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    usercode = reader.GetString(0);
+                }
+                reader.Close();
+
+                string product_code = datagridview1.SelectedRows[0].Cells["product_code"].Value.ToString();
+                string query = "DELETE FROM product WHERE product_code = @product_code";
+                MySqlCommand command = new MySqlCommand(query, conn);
+
+                command.Parameters.AddWithValue("@product_code", product_code);
+
+                DialogResult result = MessageBox.Show(this, "Apakah Anda Yakin Menghapus Data ini?!", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+
+                if (result == DialogResult.Yes)
+                {
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        string selectQuery = "SELECT * FROM product";
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connectionString))
+                        {
+                            DataTable dataTable = new DataTable();
+                            adapter.Fill(dataTable);
+                            datagridview1.DataSource = dataTable;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan atau terjadi kesalahan");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
+            }
+        }
+
+
+
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            connection.Open();
+            DeleteData();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            txt_name.Text = "";
+            txt_category.Text = "";
+            txt_stock.Text = "";
+            txt_price.Text = "";
         }
     }
 }

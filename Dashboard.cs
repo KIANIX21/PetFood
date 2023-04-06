@@ -13,13 +13,14 @@ namespace PetFood_Project
     public partial class Dashboard : Form
     {
         public string username;
+        private int user_code;
         public Dashboard(string username)
         {
             InitializeComponent();
             // Set the username as instance variable
             this.username = username;
 
-            // Show the username on the label
+            
             label2.Text = username;
         }
         //•
@@ -49,7 +50,7 @@ namespace PetFood_Project
 
         private void btn_Order_Click(object sender, EventArgs e)
         {
-            Order or = new Order(username);
+            Order or = new Order(username,user_code);
             or.Show();
             this.Hide();
         }

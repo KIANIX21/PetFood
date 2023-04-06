@@ -37,6 +37,7 @@
             this.lbl_order = new System.Windows.Forms.Label();
             this.lbl_code = new System.Windows.Forms.Label();
             this.lbl_user = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -136,12 +137,29 @@
             this.lbl_user.Size = new System.Drawing.Size(73, 25);
             this.lbl_user.TabIndex = 1;
             this.lbl_user.Text = "Name";
+            this.lbl_user.Click += new System.EventHandler(this.lbl_user_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(388, 639);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(84, 38);
+            this.guna2Button1.TabIndex = 4;
+            this.guna2Button1.Text = "Print";
             // 
             // receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 689);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.lbl_code);
@@ -169,5 +187,6 @@
         private System.Windows.Forms.Label lbl_order;
         private System.Windows.Forms.Label lbl_code;
         private System.Windows.Forms.Label lbl_user;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
