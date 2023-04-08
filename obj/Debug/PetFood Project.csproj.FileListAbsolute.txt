@@ -90,3 +90,5 @@ C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood Project.exe
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood Project.pdb
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.Confirm_Order.resources
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.List_Product.resources
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Confirm_Order.resources
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.List_Product.resources

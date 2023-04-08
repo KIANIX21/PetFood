@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,14 +15,21 @@ namespace PetFood_Project
     public partial class Order : Form
     {
         private string username;
-        private int usercode;
-        public Order(string username, int user_code)
+        private string ordercode;
+        private decimal total; // tambahkan variabel total
+        public string OrderCode // Property untuk menampung nilai ordercode
+        {
+            get { return ordercode; }
+            set { ordercode = value; lbl_code.Text = ordercode; }
+        }
+        public decimal Total { get { return total; } }
+
+        public Order(string username)
         {
             InitializeComponent();
             this.username = username;
-            this.usercode = user_code;
             label1.Text = username;
-            label2.Text = user_code.ToString();
+            this.lbl_harga.Text = total.ToString();
         }
 
         private void Dashboard_Click(object sender, EventArgs e)
@@ -45,74 +53,49 @@ namespace PetFood_Project
             this.Hide();
         }
 
-        private void btn_CRUD_Click(object sender, EventArgs e)
-        {
-            Confirm_Order co = new Confirm_Order();
-            co.ShowDialog();
-            
-        }
-
         private void btn_checkout_Click(object sender, EventArgs e)
         {
             receipt rp = new receipt();
+            rp.Username = username;
+            rp.OrderCode = ordercode;
             rp.ShowDialog();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            List_Product or = new List_Product();
-            or.Show();
-            this.Hide();
+            List_Product or = new List_Product(username);
+            or.ShowDialog();
+            this.Dispose();
         }
 
-        private void guna2Shapes1_Click(object sender, EventArgs e)
+        private void Order_Load(object sender, EventArgs e)
         {
+            string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
 
-        }
+            string query = "SELECT product_code, qty, subtotal FROM order_detail WHERE order_code = @order_code";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@order_code", ordercode);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
 
-        private void table_order_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
 
-        }
+            table_order.DataSource = dataTable;
+            table_order.Columns[0].HeaderText = "Product_Code";
+            table_order.Columns[1].HeaderText = "Qty";
+            table_order.Columns[2].HeaderText = "Subtotal";
 
-        private void guna2Shapes2_Click(object sender, EventArgs e)
-        {
+            total = 0;
+            foreach (DataRow row in dataTable.Rows)
+            {
+                total += Convert.ToDecimal(row["subtotal"]);
+            }
+            lbl_harga.Text = total.ToString();
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_order_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_harga_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_total_Click(object sender, EventArgs e)
-        {
-
+            connection.Close();
         }
     }
 }

@@ -38,17 +38,24 @@
             this.lbl_code = new System.Windows.Forms.Label();
             this.lbl_user = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.lbl_nama = new System.Windows.Forms.Label();
+            this.lbl_date = new System.Windows.Forms.Label();
+            this.lbl_ntotal = new System.Windows.Forms.Label();
+            this.lbl_total = new System.Windows.Forms.Label();
+            this.lbl_qty = new System.Windows.Forms.Label();
+            this.lbl_subtotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(484, 687);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(484, 689);
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
@@ -125,6 +132,7 @@
             this.lbl_code.Size = new System.Drawing.Size(64, 25);
             this.lbl_code.TabIndex = 1;
             this.lbl_code.Text = "Code";
+            this.lbl_code.Click += new System.EventHandler(this.lbl_code_Click);
             // 
             // lbl_user
             // 
@@ -154,11 +162,91 @@
             this.guna2Button1.TabIndex = 4;
             this.guna2Button1.Text = "Print";
             // 
+            // lbl_nama
+            // 
+            this.lbl_nama.AutoSize = true;
+            this.lbl_nama.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_nama.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nama.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_nama.Location = new System.Drawing.Point(12, 288);
+            this.lbl_nama.Name = "lbl_nama";
+            this.lbl_nama.Size = new System.Drawing.Size(124, 19);
+            this.lbl_nama.TabIndex = 5;
+            this.lbl_nama.Text = "Nama Product";
+            this.lbl_nama.Click += new System.EventHandler(this.lbl_nama_Click);
+            // 
+            // lbl_date
+            // 
+            this.lbl_date.AutoSize = true;
+            this.lbl_date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_date.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_date.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_date.Location = new System.Drawing.Point(13, 245);
+            this.lbl_date.Name = "lbl_date";
+            this.lbl_date.Size = new System.Drawing.Size(54, 23);
+            this.lbl_date.TabIndex = 8;
+            this.lbl_date.Text = "Date";
+            // 
+            // lbl_ntotal
+            // 
+            this.lbl_ntotal.AutoSize = true;
+            this.lbl_ntotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_ntotal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ntotal.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_ntotal.Location = new System.Drawing.Point(13, 611);
+            this.lbl_ntotal.Name = "lbl_ntotal";
+            this.lbl_ntotal.Size = new System.Drawing.Size(52, 19);
+            this.lbl_ntotal.TabIndex = 9;
+            this.lbl_ntotal.Text = "Total";
+            // 
+            // lbl_total
+            // 
+            this.lbl_total.AutoSize = true;
+            this.lbl_total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
+            this.lbl_total.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_total.Location = new System.Drawing.Point(381, 611);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(19, 19);
+            this.lbl_total.TabIndex = 10;
+            this.lbl_total.Text = "0";
+            // 
+            // lbl_qty
+            // 
+            this.lbl_qty.AutoSize = true;
+            this.lbl_qty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_qty.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_qty.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_qty.Location = new System.Drawing.Point(256, 288);
+            this.lbl_qty.Name = "lbl_qty";
+            this.lbl_qty.Size = new System.Drawing.Size(19, 19);
+            this.lbl_qty.TabIndex = 7;
+            this.lbl_qty.Text = "0";
+            // 
+            // lbl_subtotal
+            // 
+            this.lbl_subtotal.AutoSize = true;
+            this.lbl_subtotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
+            this.lbl_subtotal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_subtotal.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_subtotal.Location = new System.Drawing.Point(381, 284);
+            this.lbl_subtotal.Name = "lbl_subtotal";
+            this.lbl_subtotal.Size = new System.Drawing.Size(78, 19);
+            this.lbl_subtotal.TabIndex = 6;
+            this.lbl_subtotal.Text = "Subtotal";
+            this.lbl_subtotal.Click += new System.EventHandler(this.lbl_subtotal_Click);
+            // 
             // receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 689);
+            this.Controls.Add(this.lbl_total);
+            this.Controls.Add(this.lbl_ntotal);
+            this.Controls.Add(this.lbl_date);
+            this.Controls.Add(this.lbl_qty);
+            this.Controls.Add(this.lbl_subtotal);
+            this.Controls.Add(this.lbl_nama);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.lbl_user);
@@ -170,6 +258,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "receipt";
             this.Text = "receipt";
+            this.Load += new System.EventHandler(this.receipt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -188,5 +277,11 @@
         private System.Windows.Forms.Label lbl_code;
         private System.Windows.Forms.Label lbl_user;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label lbl_nama;
+        private System.Windows.Forms.Label lbl_date;
+        private System.Windows.Forms.Label lbl_ntotal;
+        private System.Windows.Forms.Label lbl_total;
+        private System.Windows.Forms.Label lbl_qty;
+        private System.Windows.Forms.Label lbl_subtotal;
     }
 }

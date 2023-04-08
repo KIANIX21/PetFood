@@ -42,10 +42,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_order = new System.Windows.Forms.Label();
             this.lbl_harga = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_code = new System.Windows.Forms.Label();
             this.btn_checkout = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_total = new System.Windows.Forms.Label();
-            this.btn_CRUD = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.table_order)).BeginInit();
@@ -68,7 +67,6 @@
             this.guna2Shapes1.Text = "guna2Shapes1";
             this.guna2Shapes1.UseTransparentBackground = true;
             this.guna2Shapes1.Zoom = 100;
-            this.guna2Shapes1.Click += new System.EventHandler(this.guna2Shapes1_Click);
             // 
             // table_order
             // 
@@ -125,7 +123,6 @@
             this.table_order.ThemeStyle.RowsStyle.Height = 22;
             this.table_order.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Black;
             this.table_order.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.table_order.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_order_CellContentClick);
             // 
             // Dashboard
             // 
@@ -203,7 +200,6 @@
             this.guna2Button1.TabIndex = 9;
             this.guna2Button1.Text = "• Order";
             this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2Button2
             // 
@@ -246,7 +242,6 @@
             this.guna2Shapes2.Text = "guna2Shapes2";
             this.guna2Shapes2.UseTransparentBackground = true;
             this.guna2Shapes2.Zoom = 100;
-            this.guna2Shapes2.Click += new System.EventHandler(this.guna2Shapes2_Click);
             // 
             // label1
             // 
@@ -259,7 +254,6 @@
             this.label1.Size = new System.Drawing.Size(132, 23);
             this.label1.TabIndex = 12;
             this.label1.Text = "Nama Admin";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl_order
             // 
@@ -272,7 +266,6 @@
             this.lbl_order.Size = new System.Drawing.Size(153, 25);
             this.lbl_order.TabIndex = 14;
             this.lbl_order.Text = "Order_code  :";
-            this.lbl_order.Click += new System.EventHandler(this.lbl_order_Click);
             // 
             // lbl_harga
             // 
@@ -285,20 +278,18 @@
             this.lbl_harga.Size = new System.Drawing.Size(22, 23);
             this.lbl_harga.TabIndex = 14;
             this.lbl_harga.Text = "0";
-            this.lbl_harga.Click += new System.EventHandler(this.lbl_harga_Click);
             // 
-            // label2
+            // lbl_code
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(550, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 25);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Code\r\n";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lbl_code.AutoSize = true;
+            this.lbl_code.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_code.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_code.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_code.Location = new System.Drawing.Point(550, 94);
+            this.lbl_code.Name = "lbl_code";
+            this.lbl_code.Size = new System.Drawing.Size(64, 25);
+            this.lbl_code.TabIndex = 14;
+            this.lbl_code.Text = "Code";
             // 
             // btn_checkout
             // 
@@ -335,32 +326,6 @@
             this.lbl_total.Size = new System.Drawing.Size(72, 23);
             this.lbl_total.TabIndex = 14;
             this.lbl_total.Text = "Total :";
-            this.lbl_total.Click += new System.EventHandler(this.lbl_total_Click);
-            // 
-            // btn_CRUD
-            // 
-            this.btn_CRUD.Animated = true;
-            this.btn_CRUD.AutoRoundedCorners = true;
-            this.btn_CRUD.BackColor = System.Drawing.Color.Transparent;
-            this.btn_CRUD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
-            this.btn_CRUD.BorderRadius = 13;
-            this.btn_CRUD.BorderThickness = 1;
-            this.btn_CRUD.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_CRUD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_CRUD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_CRUD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_CRUD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
-            this.btn_CRUD.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.btn_CRUD.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
-            this.btn_CRUD.ForeColor = System.Drawing.Color.White;
-            this.btn_CRUD.Image = ((System.Drawing.Image)(resources.GetObject("btn_CRUD.Image")));
-            this.btn_CRUD.IndicateFocus = true;
-            this.btn_CRUD.Location = new System.Drawing.Point(396, 457);
-            this.btn_CRUD.Name = "btn_CRUD";
-            this.btn_CRUD.Size = new System.Drawing.Size(38, 29);
-            this.btn_CRUD.TabIndex = 13;
-            this.btn_CRUD.UseTransparentBackground = true;
-            this.btn_CRUD.Click += new System.EventHandler(this.btn_CRUD_Click);
             // 
             // guna2PictureBox1
             // 
@@ -372,7 +337,6 @@
             this.guna2PictureBox1.Size = new System.Drawing.Size(1184, 561);
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // guna2Button3
             // 
@@ -399,9 +363,8 @@
             this.Controls.Add(this.btn_checkout);
             this.Controls.Add(this.lbl_harga);
             this.Controls.Add(this.lbl_total);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_code);
             this.Controls.Add(this.lbl_order);
-            this.Controls.Add(this.btn_CRUD);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Shapes2);
             this.Controls.Add(this.guna2Button2);
@@ -414,6 +377,7 @@
             this.Name = "Order";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order";
+            this.Load += new System.EventHandler(this.Order_Load);
             ((System.ComponentModel.ISupportInitialize)(this.table_order)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -432,11 +396,10 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button btn_CRUD;
         private System.Windows.Forms.Label lbl_order;
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Label lbl_harga;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_code;
         private Guna.UI2.WinForms.Guna2Button btn_checkout;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }

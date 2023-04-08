@@ -16,7 +16,9 @@ namespace PetFood_Project
     { 
 
         private string username;
-        private int user_code;
+        private string ordercode;
+        private decimal total;
+
         public Product(string username)
         {
             InitializeComponent();
@@ -33,9 +35,9 @@ namespace PetFood_Project
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Order or = new Order(username, user_code);
-            or.Show();
-            this.Hide();
+            Confirm_Order co = new Confirm_Order(username, ordercode, total);
+            co.ShowDialog();
+            this.Dispose();
         }
 
         private void btn_CRUD_Click(object sender, EventArgs e)

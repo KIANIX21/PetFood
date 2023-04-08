@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,37 +15,85 @@ namespace PetFood_Project
     public partial class Confirm_Order : Form
     {
         private string username;
-        private int usercode;
-        public Confirm_Order()
+        private string ordercode;
+        private decimal total;
+        public Confirm_Order(string username, string ordercode, decimal total)
         {
             InitializeComponent();
+            this.username = username;
+            this.ordercode = ordercode;
+            string idPengguna = getIdPengguna();
+            this.total = total; // tambahkan inisialisasi nilai total
+            this.txt_user.Text = idPengguna;
+            txt_total.Text = total.ToString();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
-            Order or = new Order(username,usercode);
+            Order or = new Order(this.username);
             or.Show();
-            this.Hide();
+            this.Dispose();
         }
+        private string getIdPengguna()
+        {
+            string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
+            string query = "SELECT user_code FROM users WHERE user_name = @username";
+            string idPengguna;
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+
+                    conn.Open();
+                    idPengguna = cmd.ExecuteScalar().ToString();
+                    conn.Close();
+                }
+            }
+            return idPengguna;
+        }
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    string query = "INSERT INTO order_header (order_date, order_total, user_code) VALUES (@orderdate, @ordertotal, @usercode)";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        conn.Open();
+                        cmd.Parameters.AddWithValue("@usercode", txt_user.Text);
+                        cmd.Parameters.AddWithValue("@orderdate", DateTime.Now.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@ordertotal", txt_total.Text);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Order confirmed!");
+                        conn.Close();
+                    }
+                }
+
+                string newOrderCode;
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    string query = "SELECT MAX(order_code) FROM order_header";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        conn.Open();
+                        newOrderCode = cmd.ExecuteScalar().ToString();
+                        conn.Close();
+                    }
+                }
+
+                Order or = new Order(username);
+                or.OrderCode = newOrderCode; // Menetapkan nilai ordercode ke Order form
+                or.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
     }
 }
