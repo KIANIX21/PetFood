@@ -9,6 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.Diagnostics;
+using System.IO;
+using System.Drawing.Printing;
 
 namespace PetFood_Project
 {
@@ -107,6 +112,49 @@ namespace PetFood_Project
 
             lbl_total.Text = total.ToString("C0", new CultureInfo("id-ID"));
             lbl_date.Text = orderDate.ToShortDateString();
+        }
+
+        private void btnPrintPDF_Click(object sender, EventArgs e)
+        {
+            // Buat document PDF baru
+            var doc = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 50, 50, 25, 25);
+
+            // Tentukan lokasi untuk menyimpan file PDF
+            var saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "PDF (*.pdf)|*.pdf";
+            saveFileDialog1.Title = "Save PDF";
+            saveFileDialog1.FileName = "Form.pdf";
+            if (saveFileDialog1.ShowDialog() != DialogResult.OK)
+            {
+                return;
+            }
+
+            // Buka file stream untuk menyimpan PDF
+            var fs = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None);
+            var writer = iTextSharp.text.pdf.PdfWriter.GetInstance(doc, fs);
+
+            // Tambahkan konten ke document PDF
+            doc.Open();
+            var header = new Paragraph("Struk Pembayaran");
+            header.Alignment = Element.ALIGN_CENTER;
+            doc.Add(header);
+            // Tambahkan konten form ke document PDF
+
+            var alamat = new Paragraph($"{lbl_alamat.Text}");
+            alamat.Alignment = Element.ALIGN_CENTER;
+            doc.Add(alamat);
+            doc.Add(new Paragraph($"{lbl_date.Text}"));
+            doc.Add(new Paragraph($"{lbl_username.Text} {lbl_user.Text}"));
+            doc.Add(new Paragraph($"{lbl_order_code.Text} {lbl_code.Text}"));
+            doc.Add(new Paragraph($"{lbl_nama.Text} {lbl_qty.Text} {lbl_subtotal.Text}"));
+            doc.Add(new Paragraph($"Total: {lbl_total.Text}"));
+
+
+            doc.Close();
+           
+            // Buka file PDF dengan program default
+            Process.Start(saveFileDialog1.FileName);
+
         }
     }
 }

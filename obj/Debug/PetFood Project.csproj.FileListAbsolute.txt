@@ -60,7 +60,6 @@ C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Memory.dll
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\BouncyCastle.Crypto.xml
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\Google.Protobuf.pdb
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\Google.Protobuf.xml
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\K4os.Compression.LZ4.xml
@@ -92,3 +91,5 @@ C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.Confirm_Or
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\obj\Debug\PetFood_Project.List_Product.resources
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.Confirm_Order.resources
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.List_Product.resources
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\itextsharp.dll
+C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\itextsharp.xml

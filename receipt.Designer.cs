@@ -32,12 +32,12 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbl_check = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_name = new System.Windows.Forms.Label();
-            this.lbl_order = new System.Windows.Forms.Label();
+            this.lbl_alamat = new System.Windows.Forms.Label();
+            this.lbl_username = new System.Windows.Forms.Label();
+            this.lbl_order_code = new System.Windows.Forms.Label();
             this.lbl_code = new System.Windows.Forms.Label();
             this.lbl_user = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrintPDF = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_nama = new System.Windows.Forms.Label();
             this.lbl_date = new System.Windows.Forms.Label();
             this.lbl_ntotal = new System.Windows.Forms.Label();
@@ -65,11 +65,11 @@
             this.lbl_check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
             this.lbl_check.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_check.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_check.Location = new System.Drawing.Point(182, 9);
+            this.lbl_check.Location = new System.Drawing.Point(142, 9);
             this.lbl_check.Name = "lbl_check";
-            this.lbl_check.Size = new System.Drawing.Size(119, 25);
+            this.lbl_check.Size = new System.Drawing.Size(207, 25);
             this.lbl_check.TabIndex = 1;
-            this.lbl_check.Text = "Check Out";
+            this.lbl_check.Text = "Struk Pembayaran";
             // 
             // guna2CirclePictureBox1
             // 
@@ -85,41 +85,41 @@
             this.guna2CirclePictureBox1.TabStop = false;
             this.guna2CirclePictureBox1.UseTransparentBackground = true;
             // 
-            // label1
+            // lbl_alamat
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(126, 104);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Universitas Indonesia";
+            this.lbl_alamat.AutoSize = true;
+            this.lbl_alamat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_alamat.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_alamat.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_alamat.Location = new System.Drawing.Point(126, 104);
+            this.lbl_alamat.Name = "lbl_alamat";
+            this.lbl_alamat.Size = new System.Drawing.Size(240, 25);
+            this.lbl_alamat.TabIndex = 1;
+            this.lbl_alamat.Text = "Universitas Indonesia";
             // 
-            // lbl_name
+            // lbl_username
             // 
-            this.lbl_name.AutoSize = true;
-            this.lbl_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.lbl_name.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_name.Location = new System.Drawing.Point(12, 162);
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(157, 25);
-            this.lbl_name.TabIndex = 1;
-            this.lbl_name.Text = "User_name   :";
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_username.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_username.Location = new System.Drawing.Point(12, 162);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(157, 25);
+            this.lbl_username.TabIndex = 1;
+            this.lbl_username.Text = "User_name   :";
             // 
-            // lbl_order
+            // lbl_order_code
             // 
-            this.lbl_order.AutoSize = true;
-            this.lbl_order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.lbl_order.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_order.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_order.Location = new System.Drawing.Point(12, 199);
-            this.lbl_order.Name = "lbl_order";
-            this.lbl_order.Size = new System.Drawing.Size(153, 25);
-            this.lbl_order.TabIndex = 1;
-            this.lbl_order.Text = "Order_code  :";
+            this.lbl_order_code.AutoSize = true;
+            this.lbl_order_code.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_order_code.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_order_code.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_order_code.Location = new System.Drawing.Point(12, 199);
+            this.lbl_order_code.Name = "lbl_order_code";
+            this.lbl_order_code.Size = new System.Drawing.Size(153, 25);
+            this.lbl_order_code.TabIndex = 1;
+            this.lbl_order_code.Text = "Order_code  :";
             // 
             // lbl_code
             // 
@@ -147,20 +147,21 @@
             this.lbl_user.Text = "Name";
             this.lbl_user.Click += new System.EventHandler(this.lbl_user_Click);
             // 
-            // guna2Button1
+            // btnPrintPDF
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(388, 639);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(84, 38);
-            this.guna2Button1.TabIndex = 4;
-            this.guna2Button1.Text = "Print";
+            this.btnPrintPDF.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintPDF.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintPDF.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrintPDF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrintPDF.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.btnPrintPDF.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintPDF.ForeColor = System.Drawing.Color.White;
+            this.btnPrintPDF.Location = new System.Drawing.Point(388, 639);
+            this.btnPrintPDF.Name = "btnPrintPDF";
+            this.btnPrintPDF.Size = new System.Drawing.Size(84, 38);
+            this.btnPrintPDF.TabIndex = 4;
+            this.btnPrintPDF.Text = "Print";
+            this.btnPrintPDF.Click += new System.EventHandler(this.btnPrintPDF_Click);
             // 
             // lbl_nama
             // 
@@ -247,13 +248,13 @@
             this.Controls.Add(this.lbl_qty);
             this.Controls.Add(this.lbl_subtotal);
             this.Controls.Add(this.lbl_nama);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnPrintPDF);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.lbl_code);
-            this.Controls.Add(this.lbl_order);
-            this.Controls.Add(this.lbl_name);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_order_code);
+            this.Controls.Add(this.lbl_username);
+            this.Controls.Add(this.lbl_alamat);
             this.Controls.Add(this.lbl_check);
             this.Controls.Add(this.guna2PictureBox1);
             this.Name = "receipt";
@@ -271,12 +272,12 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label lbl_check;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_name;
-        private System.Windows.Forms.Label lbl_order;
+        private System.Windows.Forms.Label lbl_alamat;
+        private System.Windows.Forms.Label lbl_username;
+        private System.Windows.Forms.Label lbl_order_code;
         private System.Windows.Forms.Label lbl_code;
         private System.Windows.Forms.Label lbl_user;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnPrintPDF;
         private System.Windows.Forms.Label lbl_nama;
         private System.Windows.Forms.Label lbl_date;
         private System.Windows.Forms.Label lbl_ntotal;
