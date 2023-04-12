@@ -52,9 +52,15 @@ namespace PetFood_Project
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            Login lg = new Login();
-            lg.Show();
-            this.Hide();
+            DialogResult result = MessageBox.Show(this, "Are you sure you want to logout?!", "Warning",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.Yes)
+            {
+                Login lg = new Login();
+                lg.Show();
+                this.Hide();
+            }
         }
 
         private void Product_Load(object sender, EventArgs e)

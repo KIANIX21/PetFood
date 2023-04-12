@@ -90,7 +90,7 @@ namespace PetFood_Project
             // Cek apakah field sudah diisi semua
             if (txt_name.Text == "" || txt_category.Text == "" || txt_stock.Text == "" || txt_price.Text == "")
             {
-                MessageBox.Show("Harap isi semua field!");
+                MessageBox.Show("Please fill in all fields!");
                 return;
             }
 
@@ -125,13 +125,12 @@ namespace PetFood_Project
                             datagridview1.DataSource = dataTable;
                         }
                     }
-
-                    MessageBox.Show("Data berhasil diupdate!");
+                    MessageBox.Show("Data updated successfully!");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
+                MessageBox.Show("There is an error: " + ex.Message);
             }
         }
 
@@ -146,7 +145,7 @@ namespace PetFood_Project
             // Cek apakah field sudah diisi semua
             if (txt_name.Text == "" || txt_category.Text == "" || txt_stock.Text == "" || txt_price.Text == "")
             {
-                MessageBox.Show("Harap isi semua field!");
+                MessageBox.Show("Please fill in all fields!");
                 return;
             }
 
@@ -179,11 +178,11 @@ namespace PetFood_Project
                     }
                 }
 
-                MessageBox.Show("Data berhasil disimpan!");
+                MessageBox.Show("Data saved successfully!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Terjadi kesalahan: " + ex.Message);
+                MessageBox.Show("There is an error: " + ex.Message);
             }
         }
 
@@ -220,7 +219,7 @@ namespace PetFood_Project
                 conn.Open();
                 if (txt_name.Text == "" || txt_category.Text == "" || txt_stock.Text == "" || txt_price.Text == "")
                 {
-                    MessageBox.Show("Harap Click Table Terlebih Dahulu!");
+                    MessageBox.Show("Please Click the Table First!");
                     return;
                 }
                 string usercode = null;
@@ -239,7 +238,7 @@ namespace PetFood_Project
 
                 command.Parameters.AddWithValue("@product_code", product_code);
 
-                DialogResult result = MessageBox.Show(this, "Apakah Anda Yakin Menghapus Data ini?!", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                DialogResult result = MessageBox.Show(this, "Are You Sure You Delete This Data?!", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
 
                 if (result == DialogResult.Yes)
                 {
@@ -257,7 +256,7 @@ namespace PetFood_Project
                     }
                     else
                     {
-                        MessageBox.Show("Data tidak ditemukan atau terjadi kesalahan");
+                        MessageBox.Show("Data not found or an error occurred");
                     }
                 }
             }

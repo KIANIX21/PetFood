@@ -128,7 +128,7 @@ namespace PetFood_Project
 
             // Tambahkan konten ke document PDF
             doc.Open();
-            var header = new Paragraph("Struk Pembayaran");
+            var header = new Paragraph("Receipt of Payment");
             header.Alignment = Element.ALIGN_CENTER;
             doc.Add(header);
             // Tambahkan konten form ke document PDF

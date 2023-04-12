@@ -49,7 +49,7 @@ namespace PetFood_Project
 
         private void btn_LogOut_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show(this, "Apakah Anda Yakin Ingin LogOut?!", "Warning",
+            DialogResult result = MessageBox.Show(this, "Are you sure you want to logout?!", "Warning",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
 
             if (result == DialogResult.Yes)
@@ -63,6 +63,18 @@ namespace PetFood_Project
 
         private void btn_checkout_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtprice.Text))
+            {
+                MessageBox.Show("Please enter the payment amount.");
+                return;
+            }
+            decimal total = decimal.Parse(lbl_harga.Text);
+            decimal pay = decimal.Parse(txtprice.Text);
+            if (pay < total)
+            {
+                MessageBox.Show("Your Money Is Less!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             receipt rp = new receipt();
             rp.Username = username;
             rp.OrderCode = ordercode;
@@ -118,12 +130,16 @@ namespace PetFood_Project
 
         private void btn_hasil_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtprice.Text))
+            {
+                MessageBox.Show("Please enter the payment amount.");
+                return;
+            }
             decimal total = decimal.Parse(lbl_harga.Text);
             decimal pay = decimal.Parse(txtprice.Text);
-
             if (pay < total)
             {
-                MessageBox.Show("Uang Anda Kurang!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Your Money Is Less!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
