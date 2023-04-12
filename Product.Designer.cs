@@ -237,7 +237,6 @@
             this.label1.Size = new System.Drawing.Size(132, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "Nama Admin";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2Shapes2
             // 
@@ -364,6 +363,7 @@
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.guna2PictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Product";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product";

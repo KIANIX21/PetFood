@@ -14,9 +14,9 @@ namespace PetFood_Project
 {
     public partial class Confirm_Order : Form
     {
-        private string username;
-        private string ordercode;
-        private decimal total;
+        public string username;
+        public string ordercode;
+        public decimal total;
         public Confirm_Order(string username, string ordercode, decimal total)
         {
             InitializeComponent();
@@ -27,12 +27,7 @@ namespace PetFood_Project
             this.txt_user.Text = idPengguna;
             txt_total.Text = total.ToString();
         }
-        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
-        {
-            Order or = new Order(this.username);
-            or.Show();
-            this.Dispose();
-        }
+
         private string getIdPengguna()
         {
             string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
@@ -44,7 +39,6 @@ namespace PetFood_Project
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
-
                     conn.Open();
                     idPengguna = cmd.ExecuteScalar().ToString();
                     conn.Close();
@@ -64,14 +58,13 @@ namespace PetFood_Project
                     {
                         conn.Open();
                         cmd.Parameters.AddWithValue("@usercode", txt_user.Text);
-                        cmd.Parameters.AddWithValue("@orderdate", DateTime.Now.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@orderdate",datetime.Value.ToString("yyyy-MM-dd"));
                         cmd.Parameters.AddWithValue("@ordertotal", txt_total.Text);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Order confirmed!");
                         conn.Close();
                     }
                 }
-
                 string newOrderCode;
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
@@ -83,7 +76,6 @@ namespace PetFood_Project
                         conn.Close();
                     }
                 }
-
                 Order or = new Order(username);
                 or.OrderCode = newOrderCode; // Menetapkan nilai ordercode ke Order form
                 or.Show();
@@ -94,6 +86,5 @@ namespace PetFood_Project
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
     }
 }

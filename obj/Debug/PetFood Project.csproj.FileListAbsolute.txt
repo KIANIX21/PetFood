@@ -21,7 +21,6 @@ D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Memory
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Numerics.Vectors.dll
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\System.Threading.Tasks.Extensions.dll
-D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\BouncyCastle.Crypto.xml
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\Google.Protobuf.pdb
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\Google.Protobuf.xml
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\K4os.Compression.LZ4.xml
@@ -93,3 +92,5 @@ D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Proje
 D:\Semester Akhir Semangat yok\Project 1\PetFood Project\obj\Debug\PetFood_Project.List_Product.resources
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\itextsharp.dll
 C:\Users\Gege\Source\Repos\KIANIX21\PetFood\bin\Debug\itextsharp.xml
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\itextsharp.dll
+D:\Semester Akhir Semangat yok\Project 1\PetFood Project\bin\Debug\itextsharp.xml

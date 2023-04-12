@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,21 +47,28 @@ namespace PetFood_Project
             this.Hide();
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btn_LogOut_Click(object sender, EventArgs e)
         {
-            Login lg = new Login();
-            lg.Show();
-            this.Hide();
+            DialogResult result = MessageBox.Show(this, "Apakah Anda Yakin Ingin LogOut?!", "Warning",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.Yes)
+            {
+                Login lg = new Login();
+                lg.Show();
+                this.Hide();
+            }
         }
+
 
         private void btn_checkout_Click(object sender, EventArgs e)
         {
             receipt rp = new receipt();
             rp.Username = username;
             rp.OrderCode = ordercode;
+            rp.Pay = decimal.Parse(txtprice.Text); // Inisialisasi nilai Pay
             rp.ShowDialog();
         }
-
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
@@ -97,5 +105,32 @@ namespace PetFood_Project
 
             connection.Close();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Confirm_Order co = new Confirm_Order(username, ordercode, total);
+            co.username = username;
+            co.ordercode = ordercode;
+            co.total = total;
+            co.ShowDialog();
+            this.Hide();
+        }
+
+        private void btn_hasil_Click(object sender, EventArgs e)
+        {
+            decimal total = decimal.Parse(lbl_harga.Text);
+            decimal pay = decimal.Parse(txtprice.Text);
+
+            if (pay < total)
+            {
+                MessageBox.Show("Uang Anda Kurang!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                decimal hasil = pay - total;
+                lbl_hasil.Text = hasil.ToString("C", new CultureInfo("id-ID"));
+            }
+        }
+
     }
 }

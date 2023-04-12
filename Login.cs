@@ -19,26 +19,6 @@ namespace PetFood_Project
             InitializeComponent();
         }
 
-        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
             string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";

@@ -214,10 +214,15 @@ namespace PetFood_Project
         {
             try
             {
+
                 string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
                 MySqlConnection conn = new MySqlConnection(connectionString);
                 conn.Open();
-
+                if (txt_name.Text == "" || txt_category.Text == "" || txt_stock.Text == "" || txt_price.Text == "")
+                {
+                    MessageBox.Show("Harap Click Table Terlebih Dahulu!");
+                    return;
+                }
                 string usercode = null;
                 MySqlCommand cmd = new MySqlCommand("SELECT user_code FROM users WHERE user_name=@username", conn);
                 cmd.Parameters.AddWithValue("@username", username);

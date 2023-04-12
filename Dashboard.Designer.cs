@@ -53,7 +53,6 @@
             this.guna2PictureBox1.Size = new System.Drawing.Size(1186, 562);
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -218,7 +217,6 @@
             this.Btn_Dashboard.TabIndex = 7;
             this.Btn_Dashboard.Text = "• Dashboard";
             this.Btn_Dashboard.UseTransparentBackground = true;
-            this.Btn_Dashboard.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // Dashboard
             // 
@@ -235,10 +233,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.guna2PictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();

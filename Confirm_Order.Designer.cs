@@ -35,10 +35,8 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txt_user = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_total = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.datetime = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,6 +108,7 @@
             this.txt_user.Name = "txt_user";
             this.txt_user.PasswordChar = '\0';
             this.txt_user.PlaceholderText = "";
+            this.txt_user.ReadOnly = true;
             this.txt_user.SelectedText = "";
             this.txt_user.Size = new System.Drawing.Size(200, 23);
             this.txt_user.TabIndex = 12;
@@ -129,24 +128,10 @@
             this.txt_total.Name = "txt_total";
             this.txt_total.PasswordChar = '\0';
             this.txt_total.PlaceholderText = "";
+            this.txt_total.ReadOnly = true;
             this.txt_total.SelectedText = "";
             this.txt_total.Size = new System.Drawing.Size(200, 23);
             this.txt_total.TabIndex = 12;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(1, 0);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(33, 38);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 13;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
             // 
             // pictureBox1
             // 
@@ -169,12 +154,13 @@
             this.datetime.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.datetime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.datetime.Location = new System.Drawing.Point(293, 176);
-            this.datetime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.datetime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.datetime.MaxDate = new System.DateTime(2240, 1, 1, 0, 0, 0, 0);
+            this.datetime.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.datetime.Name = "datetime";
             this.datetime.Size = new System.Drawing.Size(200, 26);
             this.datetime.TabIndex = 14;
-            this.datetime.Value = new System.DateTime(2023, 4, 6, 20, 27, 11, 958);
+            this.datetime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.datetime.Value = new System.DateTime(2023, 4, 11, 0, 0, 0, 0);
             // 
             // Confirm_Order
             // 
@@ -182,7 +168,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 346);
             this.Controls.Add(this.datetime);
-            this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.txt_total);
             this.Controls.Add(this.txt_user);
             this.Controls.Add(this.guna2Button1);
@@ -190,9 +175,9 @@
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Confirm_Order";
             this.Text = "Confirm_Order";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -208,7 +193,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox txt_user;
         private Guna.UI2.WinForms.Guna2TextBox txt_total;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2DateTimePicker datetime;
     }
 }

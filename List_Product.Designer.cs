@@ -149,6 +149,7 @@
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.datagridview1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "List_Product";
             this.Text = "List_Product";
             this.Load += new System.EventHandler(this.List_Product_Load);

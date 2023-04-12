@@ -15,9 +15,9 @@ namespace PetFood_Project
     public partial class Product : Form
     { 
 
-        private string username;
-        private string ordercode;
-        private decimal total;
+        public string username;
+        public string ordercode;
+        public decimal total;
 
         public Product(string username)
         {
@@ -36,8 +36,11 @@ namespace PetFood_Project
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             Confirm_Order co = new Confirm_Order(username, ordercode, total);
+            co.username = username;
+            co.ordercode = ordercode;
+            co.total = total;
             co.ShowDialog();
-            this.Dispose();
+            this.Hide();
         }
 
         private void btn_CRUD_Click(object sender, EventArgs e)
@@ -52,11 +55,6 @@ namespace PetFood_Project
             Login lg = new Login();
             lg.Show();
             this.Hide();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Product_Load(object sender, EventArgs e)

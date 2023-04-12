@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Order));
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
             this.table_order = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Dashboard = new Guna.UI2.WinForms.Guna2Button();
             this.btn_product = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_LogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Shapes2 = new Guna.UI2.WinForms.Guna2Shapes();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_order = new System.Windows.Forms.Label();
@@ -47,6 +47,10 @@
             this.lbl_total = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtprice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbl_price = new System.Windows.Forms.Label();
+            this.btn_hasil = new Guna.UI2.WinForms.Guna2Button();
+            this.lbl_hasil = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.table_order)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,28 +76,28 @@
             // 
             this.table_order.AllowUserToAddRows = false;
             this.table_order.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.table_order.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.table_order.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.table_order.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.table_order.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.table_order.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.table_order.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.table_order.ColumnHeadersHeight = 40;
             this.table_order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.table_order.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.table_order.DefaultCellStyle = dataGridViewCellStyle9;
             this.table_order.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.table_order.Location = new System.Drawing.Point(396, 122);
             this.table_order.Name = "table_order";
@@ -200,32 +204,33 @@
             this.guna2Button1.TabIndex = 9;
             this.guna2Button1.Text = "• Order";
             this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // guna2Button2
+            // btn_LogOut
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
-            this.guna2Button2.BorderRadius = 19;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.DefaultAutoSize = true;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
-            this.guna2Button2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.IndicateFocus = true;
-            this.guna2Button2.Location = new System.Drawing.Point(81, 281);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(143, 41);
-            this.guna2Button2.TabIndex = 10;
-            this.guna2Button2.Text = "• Logout";
-            this.guna2Button2.UseTransparentBackground = true;
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.btn_LogOut.Animated = true;
+            this.btn_LogOut.AutoRoundedCorners = true;
+            this.btn_LogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btn_LogOut.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
+            this.btn_LogOut.BorderRadius = 19;
+            this.btn_LogOut.BorderThickness = 1;
+            this.btn_LogOut.DefaultAutoSize = true;
+            this.btn_LogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_LogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_LogOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_LogOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.btn_LogOut.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.btn_LogOut.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
+            this.btn_LogOut.ForeColor = System.Drawing.Color.White;
+            this.btn_LogOut.IndicateFocus = true;
+            this.btn_LogOut.Location = new System.Drawing.Point(81, 281);
+            this.btn_LogOut.Name = "btn_LogOut";
+            this.btn_LogOut.Size = new System.Drawing.Size(143, 41);
+            this.btn_LogOut.TabIndex = 10;
+            this.btn_LogOut.Text = "• Logout";
+            this.btn_LogOut.UseTransparentBackground = true;
+            this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
             // 
             // guna2Shapes2
             // 
@@ -270,10 +275,10 @@
             // lbl_harga
             // 
             this.lbl_harga.AutoSize = true;
-            this.lbl_harga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
+            this.lbl_harga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.lbl_harga.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_harga.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_harga.Location = new System.Drawing.Point(1040, 94);
+            this.lbl_harga.Location = new System.Drawing.Point(522, 441);
             this.lbl_harga.Name = "lbl_harga";
             this.lbl_harga.Size = new System.Drawing.Size(22, 23);
             this.lbl_harga.TabIndex = 14;
@@ -317,11 +322,10 @@
             // lbl_total
             // 
             this.lbl_total.AutoSize = true;
-            this.lbl_total.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
             this.lbl_total.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_total.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_total.Image = ((System.Drawing.Image)(resources.GetObject("lbl_total.Image")));
-            this.lbl_total.Location = new System.Drawing.Point(962, 94);
+            this.lbl_total.Location = new System.Drawing.Point(392, 441);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(72, 23);
             this.lbl_total.TabIndex = 14;
@@ -354,11 +358,83 @@
             this.guna2Button3.Text = "+ Tambah Produk";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
+            // txtprice
+            // 
+            this.txtprice.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
+            this.txtprice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtprice.DefaultText = "";
+            this.txtprice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtprice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtprice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtprice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtprice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.txtprice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtprice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtprice.ForeColor = System.Drawing.Color.White;
+            this.txtprice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtprice.Location = new System.Drawing.Point(476, 473);
+            this.txtprice.Name = "txtprice";
+            this.txtprice.PasswordChar = '\0';
+            this.txtprice.PlaceholderText = "";
+            this.txtprice.SelectedText = "";
+            this.txtprice.Size = new System.Drawing.Size(125, 26);
+            this.txtprice.TabIndex = 17;
+            // 
+            // lbl_price
+            // 
+            this.lbl_price.AutoSize = true;
+            this.lbl_price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_price.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_price.ForeColor = System.Drawing.Color.White;
+            this.lbl_price.Location = new System.Drawing.Point(391, 474);
+            this.lbl_price.Name = "lbl_price";
+            this.lbl_price.Size = new System.Drawing.Size(57, 23);
+            this.lbl_price.TabIndex = 18;
+            this.lbl_price.Text = "Pay :";
+            // 
+            // btn_hasil
+            // 
+            this.btn_hasil.AutoRoundedCorners = true;
+            this.btn_hasil.BackColor = System.Drawing.Color.Transparent;
+            this.btn_hasil.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
+            this.btn_hasil.BorderRadius = 14;
+            this.btn_hasil.DefaultAutoSize = true;
+            this.btn_hasil.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_hasil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_hasil.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_hasil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_hasil.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.btn_hasil.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_hasil.ForeColor = System.Drawing.Color.White;
+            this.btn_hasil.Location = new System.Drawing.Point(629, 473);
+            this.btn_hasil.Name = "btn_hasil";
+            this.btn_hasil.Size = new System.Drawing.Size(44, 31);
+            this.btn_hasil.TabIndex = 19;
+            this.btn_hasil.Text = "=";
+            this.btn_hasil.UseTransparentBackground = true;
+            this.btn_hasil.Click += new System.EventHandler(this.btn_hasil_Click);
+            // 
+            // lbl_hasil
+            // 
+            this.lbl_hasil.AutoSize = true;
+            this.lbl_hasil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.lbl_hasil.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hasil.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_hasil.Location = new System.Drawing.Point(522, 514);
+            this.lbl_hasil.Name = "lbl_hasil";
+            this.lbl_hasil.Size = new System.Drawing.Size(22, 23);
+            this.lbl_hasil.TabIndex = 20;
+            this.lbl_hasil.Text = "0";
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.lbl_hasil);
+            this.Controls.Add(this.btn_hasil);
+            this.Controls.Add(this.lbl_price);
+            this.Controls.Add(this.txtprice);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.btn_checkout);
             this.Controls.Add(this.lbl_harga);
@@ -367,13 +443,14 @@
             this.Controls.Add(this.lbl_order);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Shapes2);
-            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.btn_LogOut);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.btn_product);
             this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.table_order);
             this.Controls.Add(this.guna2Shapes1);
             this.Controls.Add(this.guna2PictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Order";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order";
@@ -393,7 +470,7 @@
         private Guna.UI2.WinForms.Guna2Button Dashboard;
         private Guna.UI2.WinForms.Guna2Button btn_product;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btn_LogOut;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_order;
@@ -402,5 +479,9 @@
         private System.Windows.Forms.Label lbl_code;
         private Guna.UI2.WinForms.Guna2Button btn_checkout;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2TextBox txtprice;
+        private System.Windows.Forms.Label lbl_price;
+        private Guna.UI2.WinForms.Guna2Button btn_hasil;
+        private System.Windows.Forms.Label lbl_hasil;
     }
 }

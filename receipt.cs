@@ -21,6 +21,7 @@ namespace PetFood_Project
     {
         private string username;
         private string ordercode;
+        private decimal pay;
         private decimal total;
 
         public string Username
@@ -38,6 +39,11 @@ namespace PetFood_Project
             get { return total; }
             set { total = value; lbl_subtotal.Text = value.ToString(); }
         }
+        public decimal Pay
+        {
+            get { return pay; }
+            set { pay = value; lblpay.Text = value.ToString("C", new CultureInfo("id-ID")); }
+        }
         public receipt()
         {
             InitializeComponent();
@@ -49,21 +55,6 @@ namespace PetFood_Project
             string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-        }
-
-        private void lbl_code_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_nama_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_subtotal_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void receipt_Load(object sender, EventArgs e)
@@ -107,10 +98,12 @@ namespace PetFood_Project
                 lbl_nama.Text += pair.Key + Environment.NewLine;
                 lbl_qty.Text += pair.Value.Item1 + Environment.NewLine;
                 lbl_subtotal.Text += pair.Value.Item2.ToString("C0", new CultureInfo("id-ID")) + Environment.NewLine;
-                total += pair.Value.Item2;
+                total += pair.Value.Item2;          
             }
 
             lbl_total.Text = total.ToString("C0", new CultureInfo("id-ID"));
+            decimal change = pay - total;
+            lblchange.Text = change.ToString("C0", new CultureInfo("id-ID"));
             lbl_date.Text = orderDate.ToShortDateString();
         }
 
@@ -123,7 +116,7 @@ namespace PetFood_Project
             var saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "PDF (*.pdf)|*.pdf";
             saveFileDialog1.Title = "Save PDF";
-            saveFileDialog1.FileName = "Form.pdf";
+            saveFileDialog1.FileName = "Receipt.pdf";
             if (saveFileDialog1.ShowDialog() != DialogResult.OK)
             {
                 return;
@@ -139,7 +132,6 @@ namespace PetFood_Project
             header.Alignment = Element.ALIGN_CENTER;
             doc.Add(header);
             // Tambahkan konten form ke document PDF
-
             var alamat = new Paragraph($"{lbl_alamat.Text}");
             alamat.Alignment = Element.ALIGN_CENTER;
             doc.Add(alamat);
@@ -147,14 +139,11 @@ namespace PetFood_Project
             doc.Add(new Paragraph($"{lbl_username.Text} {lbl_user.Text}"));
             doc.Add(new Paragraph($"{lbl_order_code.Text} {lbl_code.Text}"));
             doc.Add(new Paragraph($"{lbl_nama.Text} {lbl_qty.Text} {lbl_subtotal.Text}"));
+
             doc.Add(new Paragraph($"Total: {lbl_total.Text}"));
-
-
             doc.Close();
-           
             // Buka file PDF dengan program default
             Process.Start(saveFileDialog1.FileName);
-
         }
     }
 }

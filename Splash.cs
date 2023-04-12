@@ -25,7 +25,7 @@ namespace PetFood_Project
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            startPoint += 2;
+            startPoint += 4;
             guna2ProgressBar1.Value = startPoint;
             if (guna2ProgressBar1.Value == 100)
             {
@@ -36,11 +36,6 @@ namespace PetFood_Project
                 Login login = new Login();
                 login.Show();
             }
-        }
-
-        private void guna2ProgressBar1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

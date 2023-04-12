@@ -44,6 +44,10 @@
             this.lbl_total = new System.Windows.Forms.Label();
             this.lbl_qty = new System.Windows.Forms.Label();
             this.lbl_subtotal = new System.Windows.Forms.Label();
+            this.lbl_pay = new System.Windows.Forms.Label();
+            this.lblpay = new System.Windows.Forms.Label();
+            this.lbl_change = new System.Windows.Forms.Label();
+            this.lblchange = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -91,11 +95,11 @@
             this.lbl_alamat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
             this.lbl_alamat.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_alamat.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_alamat.Location = new System.Drawing.Point(126, 104);
+            this.lbl_alamat.Location = new System.Drawing.Point(151, 101);
             this.lbl_alamat.Name = "lbl_alamat";
-            this.lbl_alamat.Size = new System.Drawing.Size(240, 25);
+            this.lbl_alamat.Size = new System.Drawing.Size(188, 25);
             this.lbl_alamat.TabIndex = 1;
-            this.lbl_alamat.Text = "Universitas Indonesia";
+            this.lbl_alamat.Text = "PETFOOD STORE";
             // 
             // lbl_username
             // 
@@ -132,7 +136,6 @@
             this.lbl_code.Size = new System.Drawing.Size(64, 25);
             this.lbl_code.TabIndex = 1;
             this.lbl_code.Text = "Code";
-            this.lbl_code.Click += new System.EventHandler(this.lbl_code_Click);
             // 
             // lbl_user
             // 
@@ -174,7 +177,6 @@
             this.lbl_nama.Size = new System.Drawing.Size(124, 19);
             this.lbl_nama.TabIndex = 5;
             this.lbl_nama.Text = "Nama Product";
-            this.lbl_nama.Click += new System.EventHandler(this.lbl_nama_Click);
             // 
             // lbl_date
             // 
@@ -194,7 +196,7 @@
             this.lbl_ntotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
             this.lbl_ntotal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ntotal.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_ntotal.Location = new System.Drawing.Point(13, 611);
+            this.lbl_ntotal.Location = new System.Drawing.Point(17, 559);
             this.lbl_ntotal.Name = "lbl_ntotal";
             this.lbl_ntotal.Size = new System.Drawing.Size(52, 19);
             this.lbl_ntotal.TabIndex = 9;
@@ -206,7 +208,7 @@
             this.lbl_total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
             this.lbl_total.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_total.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_total.Location = new System.Drawing.Point(381, 611);
+            this.lbl_total.Location = new System.Drawing.Point(343, 559);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(19, 19);
             this.lbl_total.TabIndex = 10;
@@ -235,13 +237,64 @@
             this.lbl_subtotal.Size = new System.Drawing.Size(78, 19);
             this.lbl_subtotal.TabIndex = 6;
             this.lbl_subtotal.Text = "Subtotal";
-            this.lbl_subtotal.Click += new System.EventHandler(this.lbl_subtotal_Click);
+            // 
+            // lbl_pay
+            // 
+            this.lbl_pay.AutoSize = true;
+            this.lbl_pay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_pay.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pay.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_pay.Location = new System.Drawing.Point(17, 589);
+            this.lbl_pay.Name = "lbl_pay";
+            this.lbl_pay.Size = new System.Drawing.Size(39, 19);
+            this.lbl_pay.TabIndex = 11;
+            this.lbl_pay.Text = "Pay";
+            // 
+            // lblpay
+            // 
+            this.lblpay.AutoSize = true;
+            this.lblpay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
+            this.lblpay.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpay.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblpay.Location = new System.Drawing.Point(343, 589);
+            this.lblpay.Name = "lblpay";
+            this.lblpay.Size = new System.Drawing.Size(19, 19);
+            this.lblpay.TabIndex = 12;
+            this.lblpay.Text = "0";
+            // 
+            // lbl_change
+            // 
+            this.lbl_change.AutoSize = true;
+            this.lbl_change.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
+            this.lbl_change.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_change.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_change.Location = new System.Drawing.Point(17, 621);
+            this.lbl_change.Name = "lbl_change";
+            this.lbl_change.Size = new System.Drawing.Size(70, 19);
+            this.lbl_change.TabIndex = 13;
+            this.lbl_change.Text = "Change";
+            // 
+            // lblchange
+            // 
+            this.lblchange.AutoSize = true;
+            this.lblchange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
+            this.lblchange.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblchange.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblchange.Location = new System.Drawing.Point(343, 621);
+            this.lblchange.Name = "lblchange";
+            this.lblchange.Size = new System.Drawing.Size(19, 19);
+            this.lblchange.TabIndex = 14;
+            this.lblchange.Text = "0";
             // 
             // receipt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 689);
+            this.Controls.Add(this.lblchange);
+            this.Controls.Add(this.lbl_change);
+            this.Controls.Add(this.lblpay);
+            this.Controls.Add(this.lbl_pay);
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.lbl_ntotal);
             this.Controls.Add(this.lbl_date);
@@ -257,6 +310,7 @@
             this.Controls.Add(this.lbl_alamat);
             this.Controls.Add(this.lbl_check);
             this.Controls.Add(this.guna2PictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "receipt";
             this.Text = "receipt";
             this.Load += new System.EventHandler(this.receipt_Load);
@@ -284,5 +338,9 @@
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Label lbl_qty;
         private System.Windows.Forms.Label lbl_subtotal;
+        private System.Windows.Forms.Label lbl_pay;
+        private System.Windows.Forms.Label lblpay;
+        private System.Windows.Forms.Label lbl_change;
+        private System.Windows.Forms.Label lblchange;
     }
 }

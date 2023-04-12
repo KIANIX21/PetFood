@@ -388,6 +388,7 @@
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.datagridview1);
             this.Controls.Add(this.btn_create);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CRUD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRUD";
