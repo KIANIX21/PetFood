@@ -136,6 +136,7 @@
             this.btn_product.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_product.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_product.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_product.Enabled = false;
             this.btn_product.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.btn_product.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
             this.btn_product.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);

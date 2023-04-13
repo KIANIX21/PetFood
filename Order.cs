@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,9 +64,14 @@ namespace PetFood_Project
 
         private void btn_checkout_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtprice.Text))
+            if (table_order.Rows.Count == 0)
             {
-                MessageBox.Show("Please enter the payment amount.");
+                MessageBox.Show("Please add items to the order first.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(lbl_hasil.Text))
+            {
+                MessageBox.Show("Please make sure it is totaled.");
                 return;
             }
             decimal total = decimal.Parse(lbl_harga.Text);
@@ -130,6 +136,11 @@ namespace PetFood_Project
 
         private void btn_hasil_Click(object sender, EventArgs e)
         {
+            if (table_order.Rows.Count == 0)
+            {
+                MessageBox.Show("Please add items to the order first.");
+                return;
+            }
             if (string.IsNullOrEmpty(txtprice.Text))
             {
                 MessageBox.Show("Please enter the payment amount.");
@@ -148,9 +159,53 @@ namespace PetFood_Project
             }
         }
 
-        private void lbl_hasil_Click(object sender, EventArgs e)
+        private void btn_delete_Click(object sender, EventArgs e)
         {
+            if (table_order.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a row to delete.");
+                return;
+            }
 
+            DialogResult result = MessageBox.Show(this, "Are you sure you want to delete this item?", "Warning",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+
+            if (result == DialogResult.Yes)
+            {
+                string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
+                MySqlConnection connection = new MySqlConnection(connectionString);
+
+                try
+                {
+                    connection.Open();
+
+                    string product_code = table_order.SelectedRows[0].Cells["product_code"].Value.ToString();
+
+                    string query = "DELETE FROM order_detail WHERE order_code = @order_code AND product_code = @product_code";
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@order_code", ordercode);
+                    command.Parameters.AddWithValue("@product_code", product_code);
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Item deleted successfully.");
+                        Order_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable to delete item.");
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
         }
     }
 }

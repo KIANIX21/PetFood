@@ -173,5 +173,31 @@ namespace PetFood_Project
             }
         }
 
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+            // membuat koneksi ke database MySQL
+            string connectionString = "server=localhost;port=3306;database=db_petfood;uid=root;password=;";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+
+            // membuka koneksi ke database
+            connection.Open();
+
+            // membuat command untuk mencari data pada tabel
+            MySqlCommand command = new MySqlCommand("SELECT * FROM product WHERE product_code LIKE @keyword OR product_category LIKE @keyword", connection);
+            command.Parameters.AddWithValue("@keyword", "%" + txt_search.Text + "%");
+
+            // membuat adapter dan dataset untuk menampung hasil pencarian
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataSet dataSet = new DataSet();
+
+            // mengisi dataset dengan data dari tabel
+            adapter.Fill(dataSet);
+
+            // menampilkan hasil pencarian pada DataGridView
+            datagridview1.DataSource = dataSet.Tables[0];
+
+            // menutup koneksi ke database
+            connection.Close();
+        }
     }
 }

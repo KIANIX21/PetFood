@@ -51,6 +51,7 @@
             this.lbl_price = new System.Windows.Forms.Label();
             this.btn_hasil = new Guna.UI2.WinForms.Guna2Button();
             this.lbl_hasil = new System.Windows.Forms.Label();
+            this.btn_delete = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.table_order)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -103,7 +104,6 @@
             this.table_order.Name = "table_order";
             this.table_order.RowHeadersVisible = false;
             this.table_order.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.table_order.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.table_order.Size = new System.Drawing.Size(758, 313);
             this.table_order.TabIndex = 6;
             this.table_order.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -141,6 +141,7 @@
             this.Dashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Dashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Dashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Dashboard.Enabled = false;
             this.Dashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.Dashboard.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
             this.Dashboard.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
@@ -167,6 +168,7 @@
             this.btn_product.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_product.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_product.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_product.Enabled = false;
             this.btn_product.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.btn_product.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
             this.btn_product.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
@@ -193,6 +195,7 @@
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Enabled = false;
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.guna2Button1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(73)))));
             this.guna2Button1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold);
@@ -422,16 +425,38 @@
             this.lbl_hasil.ForeColor = System.Drawing.SystemColors.Control;
             this.lbl_hasil.Location = new System.Drawing.Point(522, 514);
             this.lbl_hasil.Name = "lbl_hasil";
-            this.lbl_hasil.Size = new System.Drawing.Size(22, 23);
+            this.lbl_hasil.Size = new System.Drawing.Size(16, 23);
             this.lbl_hasil.TabIndex = 20;
-            this.lbl_hasil.Text = "0";
-            this.lbl_hasil.Click += new System.EventHandler(this.lbl_hasil_Click);
+            this.lbl_hasil.Text = " ";
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.BackColor = System.Drawing.Color.Transparent;
+            this.btn_delete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(197)))), ((int)(((byte)(208)))));
+            this.btn_delete.BorderThickness = 1;
+            this.btn_delete.DefaultAutoSize = true;
+            this.btn_delete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_delete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_delete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_delete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_delete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.btn_delete.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.Location = new System.Drawing.Point(1038, 84);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(116, 35);
+            this.btn_delete.TabIndex = 21;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseTransparentBackground = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.lbl_hasil);
             this.Controls.Add(this.btn_hasil);
             this.Controls.Add(this.lbl_price);
@@ -484,5 +509,6 @@
         private System.Windows.Forms.Label lbl_price;
         private Guna.UI2.WinForms.Guna2Button btn_hasil;
         private System.Windows.Forms.Label lbl_hasil;
+        private Guna.UI2.WinForms.Guna2Button btn_delete;
     }
 }

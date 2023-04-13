@@ -58,7 +58,18 @@ namespace PetFood_Project
                     {
                         conn.Open();
                         cmd.Parameters.AddWithValue("@usercode", txt_user.Text);
-                        cmd.Parameters.AddWithValue("@orderdate",datetime.Value.ToString("yyyy-MM-dd"));
+                        DateTime orderDate = datetime.Value;
+                        if (orderDate > DateTime.Today)
+                        {
+                            MessageBox.Show("Order date cannot be in the future.");
+                            return;
+                        }
+                        else if (orderDate < DateTime.Today)
+                        {
+                            MessageBox.Show("Order date cannot be before today.");
+                            return;
+                        }
+                        cmd.Parameters.AddWithValue("@orderdate", orderDate.ToString("yyyy-MM-dd"));
                         cmd.Parameters.AddWithValue("@ordertotal", txt_total.Text);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Order confirmed!");
@@ -85,6 +96,7 @@ namespace PetFood_Project
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
         }
     }
 }

@@ -75,7 +75,6 @@
             this.lbl_check.Size = new System.Drawing.Size(216, 25);
             this.lbl_check.TabIndex = 1;
             this.lbl_check.Text = "Receipt of Payment";
-            this.lbl_check.Click += new System.EventHandler(this.lbl_check_Click);
             // 
             // lbl_alamat
             // 

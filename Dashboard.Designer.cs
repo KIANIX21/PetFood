@@ -208,6 +208,7 @@
             this.Btn_Dashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Btn_Dashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Btn_Dashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_Dashboard.Enabled = false;
             this.Btn_Dashboard.FillColor = System.Drawing.Color.Transparent;
             this.Btn_Dashboard.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold);
             this.Btn_Dashboard.ForeColor = System.Drawing.Color.White;
