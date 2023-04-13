@@ -144,9 +144,13 @@ namespace PetFood_Project
             else
             {
                 decimal hasil = pay - total;
-                lbl_hasil.Text = hasil.ToString("C", new CultureInfo("id-ID"));
+                lbl_hasil.Text = hasil.ToString("C0", new CultureInfo("id-ID"));
             }
         }
 
+        private void lbl_hasil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

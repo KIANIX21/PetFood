@@ -14,6 +14,7 @@ using iTextSharp.text.pdf;
 using System.Diagnostics;
 using System.IO;
 using System.Drawing.Printing;
+using iTextSharp.text.pdf.draw;
 
 namespace PetFood_Project
 {
@@ -42,7 +43,7 @@ namespace PetFood_Project
         public decimal Pay
         {
             get { return pay; }
-            set { pay = value; lblpay.Text = value.ToString("C", new CultureInfo("id-ID")); }
+            set { pay = value; lblpay.Text = value.ToString("C0", new CultureInfo("id-ID")); }
         }
         public receipt()
         {
@@ -110,7 +111,7 @@ namespace PetFood_Project
         private void btnPrintPDF_Click(object sender, EventArgs e)
         {
             // Buat document PDF baru
-            var doc = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 50, 50, 25, 25);
+            var doc = new iTextSharp.text.Document(iTextSharp.text.PageSize.A5, 50, 50, 25, 25);
 
             // Tentukan lokasi untuk menyimpan file PDF
             var saveFileDialog1 = new SaveFileDialog();
@@ -131,19 +132,85 @@ namespace PetFood_Project
             var header = new Paragraph("Receipt of Payment");
             header.Alignment = Element.ALIGN_CENTER;
             doc.Add(header);
-            // Tambahkan konten form ke document PDF
+
             var alamat = new Paragraph($"{lbl_alamat.Text}");
             alamat.Alignment = Element.ALIGN_CENTER;
             doc.Add(alamat);
-            doc.Add(new Paragraph($"{lbl_date.Text}"));
-            doc.Add(new Paragraph($"{lbl_username.Text} {lbl_user.Text}"));
-            doc.Add(new Paragraph($"{lbl_order_code.Text} {lbl_code.Text}"));
-            doc.Add(new Paragraph($"{lbl_nama.Text} {lbl_qty.Text} {lbl_subtotal.Text}"));
+            doc.Add(new Paragraph($"Tanggal :{lbl_date.Text}"));
+            doc.Add(new Paragraph($"Username : {lbl_user.Text}"));
+            doc.Add(new Paragraph($"Order Code : {lbl_code.Text}"));
+            doc.Add(new Paragraph($"--------------------------------------------------------------------------------"));
+            var table = new PdfPTable(3);
+            table.WidthPercentage = 100;
+            table.DefaultCell.BorderWidth = 0;
 
-            doc.Add(new Paragraph($"Total: {lbl_total.Text}"));
+            table.AddCell("Name Product");
+            table.AddCell("Quantity");
+            table.AddCell("Subtotal");
+
+            List<string> names = lbl_nama.Text.Split(',').ToList();
+            List<string> quantities = lbl_qty.Text.Split(',').ToList();
+            List<string> subtotals = lbl_subtotal.Text.Split(',').ToList();
+
+            for (int i = 0; i < names.Count; i++)
+            {
+                table.AddCell(names[i]);
+                table.AddCell(quantities[i]);
+                table.AddCell(subtotals[i]);
+            }
+            doc.Add(table);
+
+            var totalParagraph = new Paragraph();
+            totalParagraph.SpacingBefore = 300f;
+
+            var totalLabel = new Chunk("Total :");
+
+            var totalValueChunk = new Chunk(lbl_total.Text);
+
+            totalParagraph.Add(totalLabel);
+            totalParagraph.Add(new Chunk(new VerticalPositionMark())); // menambahkan penanda posisi vertikal untuk memisahkan teks kiri dan kanan
+            totalParagraph.Add(totalValueChunk);
+            totalParagraph.Alignment = Element.ALIGN_RIGHT; // atur posisi paragraf ke kanan
+
+            doc.Add(totalParagraph);
+
+            var payParagraph = new Paragraph();
+
+            var payLabel = new Chunk("Pay :");
+
+            var payValueChunk = new Chunk(lblpay.Text);
+            payValueChunk.SetUnderline(0.1f, -2f);
+
+            payParagraph.Add(payLabel);
+            payParagraph.Add(new Chunk(new VerticalPositionMark())); // menambahkan penanda posisi vertikal untuk memisahkan teks kiri dan kanan
+            payParagraph.Add(payValueChunk);
+            payParagraph.Alignment = Element.ALIGN_RIGHT; // atur posisi paragraf ke kanan
+
+            doc.Add(payParagraph);
+
+            var changeParagraph = new Paragraph();
+
+            var changeLabel = new Chunk("Change : ");
+
+            var changeValueChunk = new Chunk(lblchange.Text);
+
+            changeParagraph.Add(changeLabel);
+            changeParagraph.Add(new Chunk(new VerticalPositionMark())); // menambahkan penanda posisi vertikal untuk memisahkan teks kiri dan kanan
+            changeParagraph.Add(changeValueChunk);
+            changeParagraph.Alignment = Element.ALIGN_RIGHT; // atur posisi paragraf ke kanan
+
+            doc.Add(changeParagraph);
+            
+
+
             doc.Close();
             // Buka file PDF dengan program default
             Process.Start(saveFileDialog1.FileName);
+        }
+
+        private void lbl_check_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
